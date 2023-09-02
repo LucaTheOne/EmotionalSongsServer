@@ -21,6 +21,11 @@ public class EmozioniDataChecker extends UnicastRemoteObject implements Emotions
     private static final long serialVersionUID = 1L;
     private final Connection CONNECTION_TO_DB;
     
+    /**
+     * Metodo costruttore della classe
+     * @param Conn: connessione con il database
+     * @throws RemoteException: sollevata se il collegamento con il database dovesse fallire
+     */
     public EmozioniDataChecker(Connection Conn)throws RemoteException{
         super();
         CONNECTION_TO_DB = Conn;

@@ -21,6 +21,11 @@ public class PlaylistsDataChecker extends UnicastRemoteObject implements Playlis
     private static final long serialVersionUID = 1L;
     private final Connection CONNECTION_TO_DB;
     
+    /**
+     * Metodo costruttore della classe
+     * @param Conn: connessione con il database
+     * @throws RemoteException: sollevata se il collegamento con il database dovesse fallire
+     */
     public PlaylistsDataChecker(Connection Conn) throws RemoteException{
         super();
         CONNECTION_TO_DB = Conn;

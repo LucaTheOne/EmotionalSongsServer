@@ -22,6 +22,11 @@ public class ProxyToDBEmozioni extends UnicastRemoteObject implements EmotionsDa
     private static final long serialVersionUID = 1L;
     private final Connection CONNECTION_TO_DB;
     
+    /**
+     * Metodo costruttore della classe
+     * @param DBConn: istanza di connessione al database
+     * @throws RemoteException: sollevata nel caso la connessione al database dovesse fallire
+     */
     public ProxyToDBEmozioni(Connection DBConn) throws RemoteException{
         super();
         CONNECTION_TO_DB = DBConn;
