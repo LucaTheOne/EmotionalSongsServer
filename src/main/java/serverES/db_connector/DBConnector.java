@@ -21,6 +21,13 @@ public class DBConnector implements Serializable{
     public static String SEP = ServerUtils.STRING_SEPARATOR;
     public static Connection connection;
     
+    /**
+     * Metodo che connette in server al database.
+     * Il database è realizzato usando PostgreSQL
+     * @param idPostgres: ID del database su PostgreSQL
+     * @param passwordPostgres: Password del database su PostgreSQL
+     * @param portPostgres: Porta del database su PostgreSQL
+     */
     protected static void connectToPostgres(String idPostgres,String passwordPostgres,int portPostgres) {
         PORT_TO_DB = portPostgres;
         final String url = "jdbc:postgresql://localhost:"+portPostgres+"/postgres";

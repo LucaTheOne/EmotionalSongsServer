@@ -19,6 +19,10 @@ public class ServerInitializer extends javax.swing.JFrame {
      */
     ServerES server;
     
+    /**
+     * Metodo costruttore della classe
+     * @param serverToInit: istanza del server da inizializzare
+     */
     public ServerInitializer(ServerES serverToInit) {
         server = serverToInit;
         initComponents();

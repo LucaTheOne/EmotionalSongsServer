@@ -42,6 +42,10 @@ public class ServerES {
     public ServerES() throws RemoteException {
          
     }
+    
+    /**
+     * Avvia il server avviando tutti i servizi necessari il suo funzionameto
+     */
     public void startServer(){
         serverControlGUI = new ServerControlGUI(this);
         try { 
@@ -124,6 +128,11 @@ public class ServerES {
         }
     }
     
+    /**
+     * Metodo main, all'avvio questo è il primo metodo eseguito
+     * @param args
+     * @throws RemoteException 
+     */
     public static void main(String[] args) throws RemoteException{
         ServerES server = new ServerES();
         new ServerInitializer(server);
