@@ -46,10 +46,19 @@ public class DBConnector implements Serializable{
         }  
     }
     
+    /**
+     * 
+     * @return il contentuto del campo connection
+     */
     public static Connection getConnection(){
         return connection;
     }
+    
     // only for texting purpose
+    /**
+     * Apre una connessione con il database su PostreSQL
+     * @return il valore di connection
+     */
     public static Connection getTextConn(){
         connectToPostgres("postgres", "root", 9876);
         return connection;

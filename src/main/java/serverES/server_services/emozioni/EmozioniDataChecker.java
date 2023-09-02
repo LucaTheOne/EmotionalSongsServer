@@ -50,6 +50,7 @@ public class EmozioniDataChecker extends UnicastRemoteObject implements Emotions
      * 3 - caratteri non ammessi nel commento.
      * 4 - Commento contiene più di 256 caratteri.
      * 5 - eccezione SQL.
+     * @throws java.rmi.RemoteException
      */
     @Override
     public boolean[] validateVote(String songId, int[] emotionalMarks, String comment)throws RemoteException{
