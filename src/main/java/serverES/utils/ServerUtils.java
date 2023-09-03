@@ -134,6 +134,11 @@ public class ServerUtils {
         return img;
     }
     
+    /**
+     * Metodo main
+     * @param args 
+     */
+    //Non so esattamente a cosa serva avere questo metodo main
     public static void main(String[] args) {
         System.out.println(ServerUtils.class.getResource("/images/logo.png").getPath());
     }

@@ -170,6 +170,7 @@ public class ProxyToDBPlaylists extends UnicastRemoteObject implements Playlists
     }
   
     //luca
+    //Non utilizzato
     @Override
     public int getUserPlaylistsNumber(String userId) throws RemoteException{
         try {
@@ -186,6 +187,7 @@ public class ProxyToDBPlaylists extends UnicastRemoteObject implements Playlists
             return 0;
         }
     }
+    
     
     //luca - fatto
     /**

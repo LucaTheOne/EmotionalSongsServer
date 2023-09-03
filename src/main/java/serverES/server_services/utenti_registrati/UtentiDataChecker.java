@@ -248,6 +248,8 @@ public class UtentiDataChecker extends UnicastRemoteObject implements UsersDataV
         
         errorsOccurred[0] = !isNewUserIDValid(userId);
         errorsOccurred[1] = isNewUserIdTaken(userId);
+        //Manca il controllo della mail
+        //errorsOccurred[2] = !isMailValid(email);
         errorsOccurred[2] = !isCFValid(cf);
         errorsOccurred[3] = isCFTaken(cf);
         errorsOccurred[4] = !isPasswordValid(password);
