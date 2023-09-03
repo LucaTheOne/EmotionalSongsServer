@@ -24,9 +24,9 @@ public class EmozioniDataChecker extends UnicastRemoteObject implements Emotions
     /**
      * Metodo costruttore della classe
      * @param Conn: connessione con il database
-     * @throws RemoteException: sollevata se il collegamento con il database dovesse fallire
+     * @throws java.rmi.RemoteException sollevata se il collegamento con il database dovesse fallire
      */
-    public EmozioniDataChecker(Connection Conn)throws RemoteException{
+    public EmozioniDataChecker(Connection Conn) throws RemoteException{
         super();
         CONNECTION_TO_DB = Conn;
     }

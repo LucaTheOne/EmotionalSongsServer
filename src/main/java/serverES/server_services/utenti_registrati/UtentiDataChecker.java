@@ -208,8 +208,7 @@ public class UtentiDataChecker extends UnicastRemoteObject implements UsersDataV
     /**
      * Metodo costruttore della classe
      * @param Conn: connessione con il database
-     * @throws java.rmi.RemoteException
-     * @throws RemoteException: sollevata se il collegamento con il database dovesse fallire
+     * @throws java.rmi.RemoteException sollevata se il collegamento con il database dovesse fallire
      */
     public UtentiDataChecker(Connection Conn) throws RemoteException{
         super();
@@ -228,18 +227,23 @@ public class UtentiDataChecker extends UnicastRemoteObject implements UsersDataV
      * @param birthDay birthDay dell' utente formato dd/mm/yyyy.
      * @param address Stringa contenente l' address di residenza del nuovo utente.
      * @return 
-     * false - errore non occorso, true errore occorso.
- posizioni errori nell' array:
- 0 - userId non valido.
- 1 - userId già scelto da un altro utente.
- 2 - codice fiscale non valido.
- 3 - codice fiscale già presente nel DB.
- 4 - password non valida.
- 5 - password non coincidono.
- 6 - name non valido.
- 7 - surname non valido.
- 8 - birthDay non valido.
- 9 - address non valido.
+     * <ul>
+     *  <li>false - errore non occorso.</li>
+     *  <li>true – errore occorso.</li>
+     * </ul>
+     * Posizioni errori nell'array:
+     * <ul>
+     *  <li>0 - userId non valido.</li>
+     *  <li>1 - userId già scelto da un altro utente.</li>
+     *  <li>2 - codice fiscale non valido.</li>
+     *  <li>3 - codice fiscale già presente nel DB.</li>
+     *  <li>4 - password non valida.</li>
+     *  <li>5 - password non coincidono.</li>
+     *  <li>6 - name non valido.</li>
+     *  <li>7 - surname non valido.</li>
+     *  <li>8 - birthDay non valido.</li>
+     *  <li>9 - address non valido.</li>
+     * </ul>
      * @throws java.rmi.RemoteException
      */
     @Override

@@ -24,7 +24,7 @@ public class PlaylistsDataChecker extends UnicastRemoteObject implements Playlis
     /**
      * Metodo costruttore della classe
      * @param Conn: connessione con il database
-     * @throws RemoteException: sollevata se il collegamento con il database dovesse fallire
+     * @throws java.rmi.RemoteException sollevata se il collegamento con il database dovesse fallire
      */
     public PlaylistsDataChecker(Connection Conn) throws RemoteException{
         super();

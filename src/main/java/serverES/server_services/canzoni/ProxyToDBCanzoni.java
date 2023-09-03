@@ -26,7 +26,7 @@ public class ProxyToDBCanzoni extends UnicastRemoteObject implements SongsDataHa
     /**
      * Metodo costruttore della classe
      * @param DBConn: istanza di connessione al database
-     * @throws RemoteException: sollevata se il collegamento con il database fallisce
+     * @throws java.rmi.RemoteException sollevata se il collegamento con il database fallisce
      */
     public ProxyToDBCanzoni(Connection DBConn)throws RemoteException{
         super();

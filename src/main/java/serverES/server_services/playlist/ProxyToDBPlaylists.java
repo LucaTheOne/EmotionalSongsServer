@@ -10,7 +10,6 @@ import serverES.utils.ServerUtils;
 import java.rmi.*;
 import java.rmi.server.*;
 import java.sql.*;
-import serverES.*;
 import serverES.server_services_common_interfaces.data_handler.*;
 
 /**
@@ -25,7 +24,7 @@ public class ProxyToDBPlaylists extends UnicastRemoteObject implements Playlists
     /**
      * Metodo costruttore della classe
      * @param DBConn: istanza di connessione al database
-     * @throws RemoteException: sollevata nel caso la connessione al database dovesse fallire
+     * @throws java.rmi.RemoteException sollevata nel caso la connessione al database dovesse fallire
      */
     public ProxyToDBPlaylists(Connection DBConn) throws RemoteException{
         super();
@@ -36,10 +35,10 @@ public class ProxyToDBPlaylists extends UnicastRemoteObject implements Playlists
     /**
      * Metodo che ritorna un array di stringhe, 
      * nel quale ogni posizione contiene l'id univoco di una playlist dell' utente
-     * ed il suo nome separati da SEP.
-     *      -Formato: "ID_PLAYLIST£SEP£User_PROP_ID£SEP£NOME_PLAYLIST" -
+     * ed il suo nome separati da SEP.-Formato: "ID_PLAYLIST£SEP£User_PROP_ID£SEP£NOME_PLAYLIST" -
      * @param idUser id utente di cui si vuole sapere il nome delle playlist.
      * @return array di Stringhe contenente id e nomi delle playlist, null se l' utente non ha playlist.
+     * @throws java.rmi.RemoteException
      */
     @Override
     public String[] requestPlaylistsUser(String idUser) throws RemoteException{
